@@ -41,9 +41,9 @@ def mat_hist_rgb(hist, ylim = 0.06):
     plt.xlim(0, 255)
     plt.yticks([])
     plt.show()
-img_lena = io.imread("bote.jpg")
+img_lena = io.imread("leon.jpg")
 hist_lena = hist_rgb(img_lena)
 mat_hist_rgb(hist_lena)
-img_gamma = gammma(img_lena, r=2.0) ### aca le podes cambiar el valor del gamma en el r=
-io.imsave("r05.png ", img_gamma)
+img_gamma = gammma(img_lena, r=4) ### aca le podes cambiar el valor del gamma en el r=
+io.imsave("leonGamma.png ", img_gamma)
 mat_hist_rgb(hist_rgb(img_gamma))
