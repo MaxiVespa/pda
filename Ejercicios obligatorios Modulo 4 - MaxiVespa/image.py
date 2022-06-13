@@ -8,7 +8,7 @@ from scipy import signal
 
 #CLASES
 class Image():
-    """Documentación de Image"""
+    
 
     def __init__(self, dimensiones:tuple = None, filename:str = ""):
         """Crea una imagen
@@ -131,7 +131,7 @@ def ajustarGamma(image, gamma):
 
 def aplicarKernel(imagen, kernel):    
     """Se cargan los kernel solicitados y se los aplica a la imagen"""
-    KERNELS = {"topSobel": np.array([[-1,-1,-1],[-1, 8,-1],[-1,-1,-1]]),
+    KERNELS = {"topSobel": np.array([[-1,-1,-1],[-1,8,-1],[-1,-1,-1]]),
                 "blur": np.array([[0.0625, 0.125,0.0625],[0.125, 0.25, 0.125],[0.0625, 0.125,0.0625]]),
                 "bottomSobel": np.array([[-1,-2,-1],[0,0,0],[1,2,1]]),
                 "leftSobel": np.array([[1,0,-1],[2,0,-2],[1,0,-1]]),
@@ -164,7 +164,7 @@ def graficarShow(imagen):
 def main():
 
     imagen1=Image(filename="C:\Github\pdaNuevo\Ejercicios obligatorios Modulo 4 - MaxiVespa\coronary-angiogram.jpg")    
-    imagen1=ajustarContraste(imagen1,1)    
+    imagen1=ajustarContraste(imagen1,1)  
     procesada = aplicarKernel(imagen1,"topSobel")
     graficarShow(procesada)
 
